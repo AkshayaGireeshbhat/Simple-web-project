@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Simple calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body>
+        <h2>simple calculator</h2>
+               <script>
+
+
+            function plus(a,b) {
+                return (a + b);
+            }
+
+            function minus(a,b) {
+                return (a - b);
+            }
+
+            function multiply(a,b) {
+                return (a * b);
+            }
+
+            function divide(a,b) {
+                return (a / b);
+            } 
+            
+            function MOD(a,b) {
+                return (a% b);
+            }
+
+            function calc() {
+                var w;
+                var x = document.getElementById("oper1").value;
+                var y = document.getElementById("operx").value;
+                var z = document.getElementById("oper2").value;
+                //document.getElementById("resul").innerHTML=w;
+
+                switch (y) {
+                    case '0':
+                        w = plus(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                    case '1':
+                        w = MINUS(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                    case '2':
+                        w = multiply(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                    case '3':
+                        w = divide(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                         case '4':
+                        w = mod(x, z);
+                document.getElementById("resul").innerHTML=w;
+                        break;
+                    default:
+                        w = "Don't really know..";
+                }
+
+            }
+</script>
+<input type="text" id="oper1" value="">
+<select id="operx">
+    <option value="0">SUM</option>
+    <option value="1">Minus</option>
+    <option value="2">MULTIPLICAR</option>
+    <option value="3">DIVIDE</option> 
+     <option value="3">MOD</option>
+</select>
+<input type="text" id="oper2" value="">
+<input type="button" onClick="calc();" value="Solve"><br/><br/>
+<p id="resul"><b>The answer is :</b> </p>
+</script>
+    </body>
+</html>
